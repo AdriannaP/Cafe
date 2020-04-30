@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cafe.Interfaces
 {
-    interface ICoffeeRepository
+    public interface ICoffeeRepository
     {
         IEnumerable<Coffee> Coffees { get; set; }
         IEnumerable<Coffee> PreferredCoffees { get; set; }
