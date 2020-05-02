@@ -14,7 +14,7 @@ namespace Cafe.Models
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
         public string ImageThumbnailUrl { get; set; }
-        public bool IsPrefrredDrink { get; set; }
+        public bool IsPrefferrdCoffee { get; set; }
         public bool InStock { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }

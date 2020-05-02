@@ -8,8 +8,8 @@ namespace Cafe.Interfaces
 {
     public interface ICoffeeRepository
     {
-        IEnumerable<Coffee> Coffees { get; set; }
-        IEnumerable<Coffee> PreferredCoffees { get; set; }
+        IEnumerable<Coffee> Coffees { get;}
+        IEnumerable<Coffee> PreferredCoffees { get;}
         Coffee GetCoffeeById(int coffeeId);
     }
 }

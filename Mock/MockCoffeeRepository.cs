@@ -20,7 +20,7 @@ namespace Cafe.Mock
         };
 
         public IEnumerable<Coffee> PreferredCoffees { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        IEnumerable<Coffee> ICoffeeRepository.Coffees { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        IEnumerable<Coffee> ICoffeeRepository.Coffees { get => throw new NotImplementedException();  }
 
         public Coffee GetCoffeeById(int coffeeId)
         {
