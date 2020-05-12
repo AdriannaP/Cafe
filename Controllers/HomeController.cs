@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Cafe.Models;
 using Cafe.Interfaces;
+using Cafe.ViewModels;
 
 namespace Cafe.Controllers
 {
@@ -37,8 +38,11 @@ namespace Cafe.Controllers
 
         public ViewResult List()
         {
-            var coffees = _coffeeRepository.Coffees;
-            return View(coffees);
+            CoffeeListViewModel vm = new CoffeeListViewModel();
+            vm.Coffees = _coffeeRepository.Coffees;
+            vm.CurrentCategory = "CoffeeCategory";
+
+            return View(vm);
         }
     }
 }
