@@ -16,9 +16,6 @@ namespace Cafe.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems {get;set;}
 
-        internal IEnumerable<Category> Categories()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

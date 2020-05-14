@@ -14,6 +14,6 @@ namespace Cafe.Repositories
         {
             _applicationDbContext = applicationDbContext;
         }
-        public IEnumerable<Category> Categories => _applicationDbContext.Categories();
+        public IEnumerable<Category> Categories => _applicationDbContext.Categories;
     }
 }
