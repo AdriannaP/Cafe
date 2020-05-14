@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Cafe.Interfaces;
 using Cafe.Mock;
 using Cafe.Models;
+using Cafe.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,10 +37,16 @@ namespace Cafe
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddScoped<ICoffeeRepository, MockCoffeeRepository>();
-            services.AddScoped<ICategoryRepository, MockCategoryRepository>();
+
+            services.AddTransient<ICoffeeRepository, CoffeeRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped( sp => ShoppingCart.GetCart(sp));
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +66,9 @@ namespace Cafe
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
