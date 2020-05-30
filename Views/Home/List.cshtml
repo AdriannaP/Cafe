@@ -7,8 +7,8 @@
 
 <h2>@Model.CurrentCategory</h2>
 
-@{ 
-    foreach(Coffee coffee in Model.Coffees)
+@{
+    foreach (Coffee coffee in Model.Coffees)
     {
         @Html.Partial("CoffeesSummary", coffee)
     }
