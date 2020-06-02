@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -30,16 +31,6 @@ namespace Cafe.Models
             return new ShoppingCart(context) { ShoppingCartId = cartId };
         }
 
-        public  decimal GetShoppingCartTotal()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ShoppingCartItem> GetShoppingCartItems()
-        {
-            throw new NotImplementedException();
-        }
-
         public void AddToCart(Coffee coffee, int amount)
         {
             var shoppingCartItem =
@@ -64,9 +55,54 @@ namespace Cafe.Models
             _applicationDbContext.SaveChanges();
         }
 
-        internal void RemoveFromCart(Coffee selectedCoffee)
+        public int RemoveFromCart(Coffee coffee)
         {
-            throw new NotImplementedException();
+            var shoppingCartItem = _applicationDbContext.ShoppingCartItems.SingleOrDefault(
+                s => s.Coffee.CoffeeId == coffee.CoffeeId && s.ShoppingCartId == ShoppingCartId);
+
+            var localAmount = 0;
+
+            if(shoppingCartItem != null)
+            {
+                if(shoppingCartItem.Amount > 1)
+                {
+                    shoppingCartItem.Amount--;
+                    localAmount = shoppingCartItem.Amount;
+                }
+                else
+                {
+                    _applicationDbContext.ShoppingCartItems.Remove(shoppingCartItem);
+                }
+            }
+            _applicationDbContext.SaveChanges();
+            return localAmount;
+        }
+
+        public List<ShoppingCartItem> GetShoppingCartItems()
+        {
+            return ShoppingCartItems ??
+                (ShoppingCartItems =
+                _applicationDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+                .Include(s => s.Coffee)
+                .ToList());
+        }
+
+        public void ClearCart()
+        {
+            var cartItems = _applicationDbContext
+                .ShoppingCartItems
+                .Where(cart => cart.ShoppingCartId == ShoppingCartId);
+
+            _applicationDbContext.ShoppingCartItems.RemoveRange(cartItems);
+
+            _applicationDbContext.SaveChanges();
+        }
+
+        public decimal GetShoppingCartTotal()
+        {
+            var total = _applicationDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId ==ShoppingCartId)
+                .Select(c => c.Coffee.Price * c.Amount).Sum();
+            return total;
         }
     }
 }

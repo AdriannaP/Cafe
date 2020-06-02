@@ -25,7 +25,10 @@ C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Cafe.Views.pdb
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Cafe.dll
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Cafe.pdb
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Cafe.csproj.CopyComplete
-C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Home\List.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Shared\CoffeesSummary.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Carousel.g.cshtml.cs
+C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\ShoppingCartSummary\Default.g.cshtml.cs
+C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\ShoppingCart\Index.g.cshtml.cs
+C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\List.g.cshtml.cs
+C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\Details.g.cshtml.cs

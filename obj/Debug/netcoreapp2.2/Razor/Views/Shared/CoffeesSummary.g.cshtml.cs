@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #line 1 "C:\Users\Adrianna\source\repos\Cafe\Cafe\Views\_ViewImports.cshtml"
-using Cafe;
+using Cafe.ViewModels;
 
 #line default
 #line hidden
@@ -24,7 +24,7 @@ using Cafe.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5162a1a973841b8ae341b231899afcf485475faa", @"/Views/Shared/CoffeesSummary.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1ec1d1d2251e08cbfe34610fe24f19a3578c9b6e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"78d49c05bd4b4f0c9a2d6c2937b01c330d4f1ff9", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_CoffeesSummary : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Coffee>
     {
         #pragma warning disable 1998

@@ -7,9 +7,37 @@
 
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" Link="wwwroot\Content\css\bootstrap-grid.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" Link="wwwroot\Content\css\bootstrap-grid.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" Link="wwwroot\Content\css\bootstrap-grid.min.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" Link="wwwroot\Content\css\bootstrap-grid.min.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" Link="wwwroot\Content\css\bootstrap-reboot.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" Link="wwwroot\Content\css\bootstrap-reboot.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" Link="wwwroot\Content\css\bootstrap-reboot.min.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" Link="wwwroot\Content\css\bootstrap-reboot.min.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.css" Link="wwwroot\Content\css\bootstrap.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.css.map" Link="wwwroot\Content\css\bootstrap.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css" Link="wwwroot\Content\css\bootstrap.min.css" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" Link="wwwroot\Content\css\bootstrap.min.css.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" Link="wwwroot\js\bootstrap.bundle.js" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" Link="wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" Link="wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" Link="wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.js" Link="wwwroot\js\bootstrap.js" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.js.map" Link="wwwroot\js\bootstrap.js.map" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js" Link="wwwroot\js\bootstrap.min.js" />
+    <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" Link="wwwroot\js\bootstrap.min.js.map" />
+  </ItemGroup>
+
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

@@ -1,0 +1,29 @@
+﻿@using Cafe.ViewModels
+@model Cafe.ViewModels.CoffeeListViewModel
+
+
+<div>
+    <h2> All coffees are show here </h2>
+</div>
+
+<h2>@Model.CurrentCategory</h2>
+
+@{
+    foreach (Coffee coffee in Model.Coffees)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="@coffee.ImageThumbnailUrl" alt="" />
+                <div class="caption">
+                    <h3 class="pull-right">@coffee.Price.ToString("c")</h3>
+                    
+                        <a>
+                            @coffee.Name
+                        </a>
+                        <p> @coffee.ShortDescription</p>
+                    
+                </div>
+            </div>
+        </div>
+    }
+}
