@@ -35,6 +35,9 @@
     <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.js.map" Link="wwwroot\js\bootstrap.js.map" />
     <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js" Link="wwwroot\js\bootstrap.min.js" />
     <Content Update="C:\Users\Adrianna\.nuget\packages\bootstrap\4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" Link="wwwroot\js\bootstrap.min.js.map" />
+    <Content Update="wwwroot\Content\css\site2.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 

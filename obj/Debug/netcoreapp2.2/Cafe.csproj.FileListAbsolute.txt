@@ -32,3 +32,4 @@ C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Sha
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\ShoppingCart\Index.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\List.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\Details.g.cshtml.cs
+C:\Users\Adrianna\source\repos\Cafe\Cafe\bin\Debug\netcoreapp2.2\wwwroot\Content\css\site2.css
