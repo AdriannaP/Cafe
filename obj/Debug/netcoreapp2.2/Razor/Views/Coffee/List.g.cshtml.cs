@@ -24,7 +24,7 @@ using Cafe.ViewModels;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b2916ee69a3384c5f195b732d2ec9d9be1dfd5b", @"/Views/Coffee/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"78d49c05bd4b4f0c9a2d6c2937b01c330d4f1ff9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d45e297311b3d6ccd682b1909d7b8d9384d64cfd", @"/Views/_ViewImports.cshtml")]
     public class Views_Coffee_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Cafe.ViewModels.CoffeeListViewModel>
     {
         #pragma warning disable 1998

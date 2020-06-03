@@ -33,3 +33,4 @@ C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Sho
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\List.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Coffee\Details.g.cshtml.cs
 C:\Users\Adrianna\source\repos\Cafe\Cafe\bin\Debug\netcoreapp2.2\wwwroot\Content\css\site2.css
+C:\Users\Adrianna\source\repos\Cafe\Cafe\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\CategoryMenu\Default.g.cshtml.cs
