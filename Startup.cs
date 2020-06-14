@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -38,12 +39,16 @@ namespace Cafe
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddTransient<ICoffeeRepository, CoffeeRepository>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICoffeeRepository, CoffeeRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped( sp => ShoppingCart.GetCart(sp));
-            
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMemoryCache();
             services.AddSession();
@@ -69,8 +74,9 @@ namespace Cafe
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
             app.UseMvc(routes =>
-            {
+            { 
                 routes.MapRoute(
                     name: "categoryFilter",
                     template: "{Coffees}/{action}/{category?}",

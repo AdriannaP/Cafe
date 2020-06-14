@@ -5,18 +5,21 @@
         <img src="@Model.ImageThumbnailUrl" alt="" />
         <div class="capition">
             <h3 class="pull-right">@Model.Price.ToString("c")</h3>
-            <h3>
-                <a>@Model.Name</a>
+            <   <h3>
+                <a asp-controller="Coffee" asp-action="Details" asp-route-drinkId="@Model.CoffeeId">@Model.Name</a>
             </h3>
             <p>@Model.ShortDescription</p>
         </div>
-        <div class="button">
-            <a class="btn btn-success" id="cartButton"
+
+        <div class="addToCart text-right">
+            <p class="button">
+                <a class="btn btn-success" id="cartButton"
                 asp-controller="ShoppingCart"
                 asp-action="AddToShoppingCart"
                 asp-route-coffeeId="@Model.CoffeeId">
                 Add to cart
-            </a>
+                </a>
+            </p>
         </div>
     </div>
 </div>

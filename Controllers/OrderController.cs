@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cafe.Interfaces;
 using Cafe.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cafe.Controllers
@@ -18,37 +19,38 @@ namespace Cafe.Controllers
             _orderRepository = orderRepository;
             _shoppingCart = shoppingCart;
         }
+
+        [Authorize]
         public IActionResult Checkout()
         {
             return View();
         }
 
+        [HttpPost]
+        [Authorize]
+        public IActionResult Checkout(Order order)
+        {
+            var items = _shoppingCart.GetShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = items;
 
-        //[HttpPost]
-        //[Authorize]
-        //public IActionResult Checkout(Order order)
-        //{
-        //    var items = _shoppingCart.GetShoppingCartItems();
-        //    _shoppingCart.ShoppingCartItems = items;
-        //    if (_shoppingCart.ShoppingCartItems.Count == 0)
-        //    {
-        //        ModelState.AddModelError("", "Your card is empty, add some coffees first");
-        //    }
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Your card is empty, add some drinks first");
+            }
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        _orderRepository.CreateOrder(order);
-        //        _shoppingCart.ClearCart();
-        //        return RedirectToAction("CheckoutComplete");
-        //    }
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(order);
+                _shoppingCart.ClearCart();
+                return RedirectToAction("CheckoutComplete");
+            }
 
-        //    return View(order);
-        //}
-
-        //public IActionResult CheckoutComplete()
-        //{
-        //    ViewBag.CheckoutCompleteMessage = "Thanks for your order! :) ";
-        //    return View();
-        //}
+            return View(order);
+        }
+        public IActionResult CheckoutComplete()
+        {
+            ViewBag.CheckoutCompleteMessage = "Thanks for your order! ";
+            return View();
+        }
     }
 }
